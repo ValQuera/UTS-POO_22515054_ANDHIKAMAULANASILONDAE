@@ -1,0 +1,109 @@
+<mxfile host="app.diagrams.net" modified="2026-11-25T02:00:00.000Z" agent="Gemini" version="24.0.0" type="device">
+  <diagram id="akademik-mini-class-diagram" name="Class Diagram">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Main -->
+        <mxCell id="cls-main" value="Main&#xa;+ main(String[] args) : void" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="60" width="220" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- Kampus -->
+        <mxCell id="cls-kampus" value="Kampus" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="60" width="320" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="attr-kampus" value="- namaKampus : String&#xa;- alamat : String&#xa;- daftarMahasiswa : SortedList&lt;Mahasiswa&gt;&#xa;- daftarMatakuliah : SortedList&lt;Matakuliah&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=left;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="cls-kampus">
+          <mxGeometry y="30" width="320" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="div-kampus" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="cls-kampus">
+          <mxGeometry y="110" width="320" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="meth-kampus" value="+ tambahMahasiswa(Mahasiswa m) : void&#xa;+ tambahMatakuliah(Matakuliah mk) : void&#xa;+ tampilkanInfoKampus() : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=left;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="cls-kampus">
+          <mxGeometry y="120" width="320" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- Mahasiswa -->
+        <mxCell id="cls-mhs" value="Mahasiswa" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="330" width="280" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="attr-mhs" value="- nim : String&#xa;- nama : String&#xa;- prodi : String&#xa;- krs : KRS" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=left;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="cls-mhs">
+          <mxGeometry y="30" width="280" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="div-mhs" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="cls-mhs">
+          <mxGeometry y="110" width="280" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="meth-mhs" value="+ getNim() : String&#xa;+ getNama() : String&#xa;+ getKrs() : KRS&#xa;+ compareTo(Mahasiswa o) : int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=left;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="cls-mhs">
+          <mxGeometry y="120" width="280" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- KRS -->
+        <mxCell id="cls-krs" value="KRS" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="590" width="310" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="attr-krs" value="- mahasiswa : Mahasiswa&#xa;- daftarMK : SortedList&lt;Matakuliah&gt;&#xa;- totalSks : int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=left;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="cls-krs">
+          <mxGeometry y="30" width="310" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="div-krs" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="cls-krs">
+          <mxGeometry y="100" width="310" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="meth-krs" value="+ tambahMatakuliah(Matakuliah mk) : void&#xa;+ hapusMatakuliah(String kodeMK) : void&#xa;+ hitungTotalSks() : int&#xa;+ tampilkanKRS() : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=left;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="cls-krs">
+          <mxGeometry y="110" width="310" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Matakuliah -->
+        <mxCell id="cls-mk" value="Matakuliah" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="760" y="330" width="280" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="attr-mk" value="- kodeMK : String&#xa;- namaMK : String&#xa;- sks : int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=left;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="cls-mk">
+          <mxGeometry y="30" width="280" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="div-mk" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="cls-mk">
+          <mxGeometry y="100" width="280" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="meth-mk" value="+ getKodeMK() : String&#xa;+ getNamaMK() : String&#xa;+ getSks() : int&#xa;+ compareTo(Matakuliah o) : int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=left;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="cls-mk">
+          <mxGeometry y="110" width="280" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- SortedList -->
+        <mxCell id="cls-sorted" value="SortedList&lt;T&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="590" width="230" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="attr-sorted" value="- head : Node&lt;T&gt;&#xa;- size : int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=left;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="cls-sorted">
+          <mxGeometry y="30" width="230" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="div-sorted" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="cls-sorted">
+          <mxGeometry y="85" width="230" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="meth-sorted" value="+ add(T data) : void&#xa;+ remove(T data) : boolean&#xa;+ find(T data) : T&#xa;+ size() : int&#xa;+ isEmpty() : boolean&#xa;+ display() : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=8;spacingRight=4;overflow=left;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="cls-sorted">
+          <mxGeometry y="95" width="230" height="95" as="geometry" />
+        </mxCell>
+
+        <!-- Relasi -->
+        <mxCell id="rel-main-kampus" value="menggunakan" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=1;exitY=0.5;entryX=0;entryY=0.25;" edge="1" parent="1" source="cls-main" target="cls-kampus">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel-kampus-mhs" value="1..*" style="endArrow=diamondThin;endFill=0;endSize=12;html=1;rounded=0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="cls-kampus" target="cls-mhs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel-kampus-mk" value="1..*" style="endArrow=diamondThin;endFill=0;endSize=12;html=1;rounded=0;exitX=1;exitY=0.75;entryX=0.5;entryY=0;" edge="1" parent="1" source="cls-kampus" target="cls-mk">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel-mhs-krs" value="1" style="endArrow=diamondThin;endFill=1;endSize=12;html=1;rounded=0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="cls-mhs" target="cls-krs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel-krs-mk" value="*" style="endArrow=diamondThin;endFill=0;endSize=12;html=1;rounded=0;exitX=1;exitY=0.5;entryX=0.5;entryY=1;" edge="1" parent="1" source="cls-krs" target="cls-mk">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel-kampus-sorted" value="ADT" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0;exitY=0.75;entryX=0.5;entryY=0;" edge="1" parent="1" source="cls-kampus" target="cls-sorted">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel-krs-sorted" value="ADT" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" edge="1" parent="1" source="cls-krs" target="cls-sorted">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
